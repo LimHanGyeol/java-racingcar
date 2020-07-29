@@ -31,7 +31,6 @@ public class SetTest {
         assertThat(numbers).hasSize(3);
         assertThat(numbers.size()).isEqualTo(3);
         assertThat(numbers.isEmpty()).isFalse();
-        assertThat(!numbers.isEmpty()).isTrue();
     }
 
     @DisplayName("요구사항2")
