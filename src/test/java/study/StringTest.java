@@ -43,4 +43,14 @@ public class StringTest {
         }).isInstanceOf(IndexOutOfBoundsException.class)
           .hasMessageContaining("String index out of range: 3");
     }
+
+    @Test
+    @DisplayName("요구사항3-1")
+    void charAtTest2() {
+        assertThatExceptionOfType(IndexOutOfBoundsException.class)
+                .isThrownBy(() -> {
+                    "abc".charAt(3);
+                }).withMessageMatching("String index out of range: 3");
+
+    }
 }
