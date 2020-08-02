@@ -7,7 +7,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 import step2.stringcalculator.CommonConstant;
-import step2.stringcalculator.CommonException;
 import step2.stringcalculator.StringCarculator;
 
 import static org.assertj.core.api.Assertions.*;
@@ -74,7 +73,7 @@ public class StringCalculatorTest {
     @DisplayName("공백 값 또는 null값이 입력될 경우 예외처리 테스트")
     void inValidInputExpressionTest1(String inputExpression) {
         assertThatThrownBy(() -> {
-            CommonException.inputExpressionInValidException(inputExpression);
+            StringCarculator.inputExpressionInValidException(inputExpression);
         }).isInstanceOf(IllegalArgumentException.class)
           .hasMessageContaining(CommonConstant.INVALID_INPUT_EXPRESSION);
     }

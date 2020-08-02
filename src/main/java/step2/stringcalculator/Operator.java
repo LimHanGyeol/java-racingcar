@@ -1,5 +1,7 @@
 package step2.stringcalculator;
 
+import java.util.function.Function;
+
 public enum Operator {
 
     PLUS(CommonConstant.PLUS_SIGN) {
@@ -37,4 +39,7 @@ public enum Operator {
     }
 
     public abstract int getSolve(int firstNumber, int secondNumber);
+
+
+
 }

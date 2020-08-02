@@ -6,7 +6,7 @@ import java.util.List;
 public class StringCarculator {
 
     public int getStringCalculator(String inputExpression) {
-        CommonException.inputExpressionInValidException(inputExpression);
+        inputExpressionInValidException(inputExpression);
 
         List<String> expressions = Arrays.asList(inputExpression.split(CommonConstant.DELIMITER));
         int resultValue = Integer.parseInt(expressions.get(0));
@@ -34,6 +34,12 @@ public class StringCarculator {
             return Operator.DIVIDED_BY.getSolve(firstNumber, secondNumber);
         }
         throw new IllegalArgumentException(operator + CommonConstant.INVALID_OPERATOR);
+    }
+
+    public static void inputExpressionInValidException(String inputExpression) {
+        if (inputExpression == null || inputExpression.trim().isEmpty()) {
+            throw new IllegalArgumentException(CommonConstant.INVALID_INPUT_EXPRESSION);
+        }
     }
 
 }

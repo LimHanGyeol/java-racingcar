@@ -2,6 +2,9 @@ package step2.stringcalculator;
 
 public class CommonConstant {
 
+    private CommonConstant() {
+    }
+
     public static final String DELIMITER = " ";
 
     public static final String PLUS_SIGN = "+";
